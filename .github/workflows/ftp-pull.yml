@@ -1,0 +1,138 @@
+name: 📥 Pull from FTP Server
+
+on:
+  workflow_dispatch: # Manual trigger
+  schedule:
+    - cron: '0 */6 * * *' # Every 6 hours
+  # push:
+  #   branches:
+  #     - main # Uncomment if you want to sync on push
+
+jobs:
+  pull-from-ftp:
+    name: 📥 Pull files from FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 📥 Download files from FTP
+        run: |
+          # Install lftp for advanced FTP operations
+          sudo apt-get update
+          sudo apt-get install -y lftp
+          
+          # Create download directory
+          mkdir -p downloaded-files
+          
+          # Download files using lftp
+          lftp -c "
+          set ftp:ssl-allow no;
+          set ftp:passive-mode on;
+          open ftp://${{ secrets.SOURCE_FTP_USERNAME }}:${{ secrets.SOURCE_FTP_PASSWORD }}@${{ secrets.SOURCE_FTP_HOST }};
+          lcd downloaded-files;
+          cd ${{ secrets.SOURCE_FTP_PATH || '/htdocs/' }};
+          mirror --verbose --delete --parallel=3 --exclude-glob=*.log --exclude-glob=*.tmp;
+          bye;
+          "
+
+      - name: 📁 Organize downloaded files
+        run: |
+          # Create timestamp for this sync
+          TIMESTAMP=$(date '+%Y-%m-%d_%H-%M-%S')
+          echo "SYNC_TIMESTAMP=$TIMESTAMP" >> $GITHUB_ENV
+          
+          # Optional: organize files by type or date
+          # mkdir -p synced-data/$TIMESTAMP
+          # cp -r downloaded-files/* synced-data/$TIMESTAMP/
+          
+          # Or move to a specific directory structure
+          # mkdir -p website-backup data logs
+          # mv downloaded-files/*.html website-backup/ 2>/dev/null || true
+          # mv downloaded-files/*.json data/ 2>/dev/null || true
+          # mv downloaded-files/*.log logs/ 2>/dev/null || true
+          
+          # Show what was downloaded
+          echo "📂 Downloaded files:"
+          find downloaded-files -type f | head -20
+
+      - name: 🔍 Check for changes
+        id: check_changes
+        run: |
+          # Add all new/changed files to git staging
+          git add .
+          
+          # Check if there are any changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes detected"
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "Changes detected"
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            
+            # Show what changed
+            echo "📊 Changes summary:"
+            git diff --staged --stat
+          fi
+
+      - name: 💾 Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          # Configure git
+          git config --local user.email "ftp-sync@github.com"
+          git config --local user.name "FTP Sync Bot"
+          
+          # Count files
+          FILE_COUNT=$(find downloaded-files -type f | wc -l)
+          
+          # Create detailed commit message
+          git commit -m "📥 FTP Sync: ${{ env.SYNC_TIMESTAMP }}
+
+          - Synced $FILE_COUNT files from FTP server
+          - Source: ${{ secrets.SOURCE_FTP_HOST }}
+          - Auto-sync via GitHub Actions
+          
+          Timestamp: ${{ env.SYNC_TIMESTAMP }}"
+          
+          # Push to repository
+          git push
+
+      - name: 📊 Create sync summary
+        if: always()
+        run: |
+          echo "## 📥 FTP Sync Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Timestamp:** ${{ env.SYNC_TIMESTAMP }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **FTP Host:** ${{ secrets.SOURCE_FTP_HOST }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Changes:** ${{ steps.check_changes.outputs.has_changes }}" >> $GITHUB_STEP_SUMMARY
+          
+          if [ -d "downloaded-files" ]; then
+            FILE_COUNT=$(find downloaded-files -type f | wc -l)
+            echo "- **Files Downloaded:** $FILE_COUNT" >> $GITHUB_STEP_SUMMARY
+            
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### 📁 File Structure:" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            tree downloaded-files/ 2>/dev/null || ls -la downloaded-files/
+            echo '```' >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: 📦 Upload download artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ftp-sync-${{ env.SYNC_TIMESTAMP }}
+          path: downloaded-files/
+          retention-days: 7
+
+      - name: 🧹 Cleanup (optional)
+        run: |
+          # Optional: remove downloaded files from repo if you only want them as artifacts
+          # rm -rf downloaded-files/
+          
+          # Optional: keep only last N days of synced data
+          # find synced-data/ -type d -mtime +7 -exec rm -rf {} + 2>/dev/null || true
+          
+          echo "Cleanup completed"
