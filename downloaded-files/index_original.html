@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    /* Basic styles for the button */
+.btn-getstarted {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Position the dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Hide the dropdown content initially */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Show the dropdown content when hovering over the dropdown container */
+.dropdown:hover .dropdown-content {
+    display: block;
+    border-radius: 10px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+  </style>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Spacs Cectl</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Updated: May 13 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <meta name="google-site-verification" content="_2xHjnDnyBirK-OdK357TbNXDepSgPaCGyfm6ZYDroA" />
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">SPACS CEC</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="">Home</a></li>
+          <li><a href="#about">About</a></li>
+            <li><a href="idcard.php">Search Members</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="event_s/event_list.php">Events</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+         
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <div class="dropdown">
+        <button class="btn-getstarted">Sign in</button>
+        <div class="dropdown-content">
+            <a href="login.html">Member Login</a>
+            <a href="spacs.html">Officer Login</a>
+        </div>
+    </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center" data-aos="zoom-out">
+            <h1 class="">Empowering tomorrow's innovators today</h1>
+            <p class="">join our SPACS and unleash your creative potential!</p>
+            <div class="d-flex">
+              <a href="ann.html" class="btn-get-started">Join Now</a>
+             
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Clients Section -->
+ 
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="">About Us</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+       <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+    <p>
+        SPACS is dedicated to empowering computer science students by nurturing their programming and managerial skills, fostering an environment of growth and innovation.
+    </p>
+    <ul>
+        <li><i class="bi bi-check2-circle"></i> <span>Hosts engaging computer programming contests to sharpen coding abilities.</span></li>
+        <li><i class="bi bi-check2-circle"></i> <span>Organizes insightful seminars on various IT topics, ensuring students stay abreast of technological advancements.</span></li>
+        <li><i class="bi bi-check2-circle"></i> <span>Encourages the development of leadership and project management skills through interactive events.</span></li>
+    </ul>
+</div>
+
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <p>SPACS is an organization for computer Science students. SPACS Aims at encouraging the talented youths of the college by enhancing their programming and managerial skills. SPACS conducts different activities such as computer programming contest, Seminars on IT related subjects etc.. </p>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Why Us Section -->
+<section id="why-us" class="section why-us" data-builder="section">
+
+  <div class="container-fluid">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+        <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+          <h3 class=""><span class="">Why Join SPACS?</span><strong> Unlock Your Potential</strong></h3>
+          <p class="">
+            SPACS is dedicated to fostering the development of computer science students by providing opportunities to enhance their technical and leadership abilities.
+          </p>
+        </div>
+
+        <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="faq-item faq-active">
+
+            <h3><span>01</span> What opportunities does SPACS provide for skill enhancement?</h3>
+            <div class="faq-content">
+              <p>SPACS organizes various activities such as coding competitions and workshops, helping students to improve their programming skills and problem-solving abilities.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span>02</span> How does SPACS contribute to professional growth?</h3>
+            <div class="faq-content">
+              <p>Through seminars and guest lectures, SPACS connects students with industry experts, providing insights into the latest trends and developments in the IT sector.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item">
+            <h3><span>03</span> What are the benefits of participating in SPACS activities?</h3>
+            <div class="faq-content">
+              <p>Involvement in SPACS activities allows students to develop essential skills, network with professionals, and gain valuable experience that can enhance their career prospects.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+
+      <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="assets/img/why-us.png" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Why Us Section -->
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row">
+
+      <div class="col-lg-6 d-flex align-items-center">
+        <img src="assets/img/skills.png" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-6 pt-4 pt-lg-0 content">
+
+        <h3>Developing Essential Skills for Success</h3>
+        <p class="fst-italic">
+          SPACS focuses on enhancing students' skills in various aspects of computer science and technology, preparing them for a successful career in the field.
+        </p>
+
+        <div class="skills-content skills-animation">
+
+          <div class="progress">
+            <span class="skill"><span>Programming</span> <i class="val">100%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>Web Development</span> <i class="val">90%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>Data Structures & Algorithms</span> <i class="val">75%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+          <div class="progress">
+            <span class="skill"><span>Graphic Design</span> <i class="val">55%</i></span>
+            <div class="progress-bar-wrap">
+              <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div><!-- End Skills Item -->
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Skills Section -->
+
+<!-- Services Section -->
+<section id="services" class="services section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Our Services</h2>
+    <p>Discover the range of activities and support we offer to enhance your skills and career prospects.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-item position-relative">
+          <div class="icon"><i class="bi bi-code-slash icon"></i></div>
+          <h4><a href="service-details.html" class="stretched-link">Programming Contests</a></h4>
+          <p>Participate in coding competitions to challenge your skills and learn from your peers.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-item position-relative">
+          <div class="icon"><i class="bi bi-chat-left-dots icon"></i></div>
+          <h4><a href="service-details.html" class="stretched-link">Seminars & Workshops</a></h4>
+          <p>Attend seminars and workshops on the latest IT trends, hosted by industry experts.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-item position-relative">
+          <div class="icon"><i class="bi bi-lightbulb icon"></i></div>
+          <h4><a href="service-details.html" class="stretched-link">Skill Development</a></h4>
+          <p>Enhance your technical and managerial skills through structured training programs.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+      <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-item position-relative">
+          <div class="icon"><i class="bi bi-people icon"></i></div>
+          <h4><a href="service-details.html" class="stretched-link">Networking Opportunities</a></h4>
+          <p>Connect with professionals and alumni through events and online platforms.</p>
+        </div>
+      </div><!-- End Service Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Services Section -->
+
+
+    <!-- Call To Action Section -->
+ <section id="call-to-action" class="call-to-action section">
+
+  <img src="assets/img/cta-bg.jpg" alt="Call To Action Background">
+
+  <div class="container">
+
+    <div class="row" data-aos="zoom-in" data-aos-delay="100">
+      <div class="col-xl-9 text-center text-xl-start">
+        <h3>Take Action Now</h3>
+        <p>Explore opportunities to enhance your skills and join a community dedicated to fostering growth and innovation in computer science.</p>
+      </div>
+      <div class="col-xl-3 cta-btn-container text-center">
+        <a class="cta-btn align-middle" href="#">Get Involved</a>
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- /Call To Action Section -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Portfolio Section -->
+
+
+    <!-- Team Section -->
+<section id="team" class="team section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>EXECUTIVE COMMITTEE 2025-26</h2>
+    <p>Meet our dedicated team of professionals</p>
+  </div><!-- End Section Title -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  
+  
+<!--  Design by foolishdeveloper.com -->
+  
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Team Section </title>
+  <style media="screen">
+
+
+.team-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff; /* Adjust as needed */
+}
+
+.section-title {
+  font-size: 36px;
+  color: #333; /* Adjust to match the site's color */
+  margin-bottom: 30px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: scale(1.05);
+}
+
+.team-member img {
+  width: 100%;
+  border-radius: 5%;
+  margin-bottom: 15px;
+  height:220px;
+}
+
+.team-member h3 {
+  font-size: 22px;
+  color: #333; /* Customize as needed */
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  font-size: 16px;
+  color: #777;
+}
+
+
+  </style>
+
+</head>
+
+<body>
+     <section class="team-section">
+    <div class="container">
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="assets/img/team/sece.jpg" alt="Team Member 1">
+          <h3>Vaikashi A</h3>
+          <p>Chair</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/1000533002.jpg" alt="Team Member 2">
+          <h3>Athulkrishna M</h3>
+          <p>Vice Chair</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/jibin.jpeg" alt="Team Member 3">
+          <h3>Jibin Krishna</h3>
+          <p>Seceratary</p>
+        </div>
+         <div class="team-member">
+          <img src="assets/img/team/.jpg" alt="Team Member 3">
+          <h3> Irshikesh K B</h3>
+          <p>Joint-Seceratary</p>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+       <section class="team-section">
+    <div class="container">
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="assets/img/team/Passportsize - Lekshmi dev.jpg" alt="Team Member 1">
+          <h3>Lekshmi Devi</h3>
+          <p>Event Management   Officer</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/Screenshot_20240703-224017~2 - MEENAKSHY SANTHOSH.png" alt="Team Member 2">
+          <h3>Meenakshy </h3>
+          <p>Membership Development Head</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/Wuta_20240620_103418.jpg" alt="Team Member 3">
+          <h3>Shifa Rabiya</h3>
+          <p>Design Team Head</p>
+        </div>
+         <div class="team-member">
+          <img src="assets/img/team/PS2 - Joseph C B.jpg" alt="Team Member 3">
+          <h3>Joseph C B</h3>
+          <p>Marketing Administrator</p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+       <section class="team-section">
+    <div class="container">
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="assets/img/team/WhatsApp Image 2024-07-19 at 22.02.36_b1cade02.jpg" alt="Team Member 1">
+          <h3>Aby Joseph</h3>
+          <p>Chief Information Officer</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/WhatsApp Image 2024-06-22 at 16.37.53_7c1bd0bc.jpg" alt="Team Member 2">
+          <h3>Jaggu bhai</h3>
+          <p>Public Relations Officer</p>
+        </div>
+        <div class="team-member">
+          <img src="assets/img/team/WhatsApp Image 2024-07-09 at 10.43.01_c30738cd.jpg" alt="Team Member 3">
+          <h3>Akshay S</h3>
+          <p>Training and Development Officer</p>
+        </div>
+         <div class="team-member">
+          <img src="assets/img/team/WhatsApp Image 2024-07-01 at 21.06.56_b4bbce48.jpg" alt="Team Member 3">
+          <h3>Kevin Biju</h3>
+          <p>Academics Affairs Head</p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </section>
+    </body>
+    <!-- Pricing Section -->
+  <section id="pricing" class="pricing section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Membership Plan</h2>
+    <p>Join our exclusive membership plan to unlock premium benefits and opportunities.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="pricing-item featured">
+          <h3>Exclusive Membership</h3>
+          <h4><sup>₹</sup>200<span> / 3 years</span></h4>
+          <ul>
+            <li><i class="bi bi-check"></i> <span>Access to all SPACS activities</span></li>
+            <li><i class="bi bi-check"></i> <span>Priority registration for events</span></li>
+            <li><i class="bi bi-check"></i> <span>Networking opportunities</span></li>
+            <li><i class="bi bi-check"></i> <span>Career development support</span></li>
+            <li><i class="bi bi-check"></i> <span>Exclusive member resources</span></li>
+          </ul>
+          <a href="#" class="buy-btn">Join Now</a>
+        </div>
+      </div><!-- End Pricing Item -->
+
+    </div>
+
+  </div>
+
+</section><!-- /Pricing Section -->
+
+
+    <!-- Testimonials Section -->
+   <section id="testimonials" class="testimonials section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Testimonials</h2>
+    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper">
+      <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": {
+            "delay": 5000
+          },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          }
+        }
+      </script>
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="Faculty Image">
+            <h3>Anitha M A</h3>
+            <h4>Assistant Professor,CEC</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>As a faculty member at College of Engineering Cherthala, I have witnessed the dedication and innovation of our students. It's truly inspiring to see their growth and achievements.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="Alumni Image">
+            <h3>Jane Smith</h3>
+            <h4>Software Engineer</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>As an alumna of College of Engineering Cherthala, the skills and knowledge I gained have been instrumental in my career. The supportive environment here shaped my success.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="Alumni Image">
+            <h3>Michael Brown</h3>
+            <h4>Entrepreneur</h4>
+            <div class="stars">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p>
+              <i class="bi bi-quote quote-icon-left"></i>
+              <span>My experience at College of Engineering Cherthala provided me with critical thinking and problem-solving skills essential for entrepreneurship. It laid a solid foundation for my career.</span>
+              <i class="bi bi-quote quote-icon-right"></i>
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <!-- Add more testimonials as needed -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- /Testimonials Section -->
+
+<section id="faq-2" class="faq-2 section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Frequently Asked Questions about SPACS</h2>
+    <p>Learn more about SPACS and its initiatives to enhance computer science students' skills.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-10">
+
+        <div class="faq-container">
+
+          <div class="faq-item faq-active" data-aos="fade-up" data-aos-delay="200">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>What is SPACS?</h3>
+            <div class="faq-content">
+              <p>SPACS (Student Programming and Computer Society) is an organization at our college aimed at fostering the talents of computer science students through various activities.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>What activities does SPACS organize?</h3>
+            <div class="faq-content">
+              <p>SPACS organizes computer programming contests, seminars on IT-related subjects, workshops on programming languages, and other events to enhance students' programming and managerial skills.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>How can I participate in SPACS activities?</h3>
+            <div class="faq-content">
+              <p>To participate in SPACS activities, you can join as a member by registering through the official college channels or contacting the SPACS coordinators directly.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>Who can join SPACS?</h3>
+            <div class="faq-content">
+              <p>SPACS is open to all computer science students interested in improving their programming skills and gaining knowledge in IT-related fields.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+          <div class="faq-item" data-aos="fade-up" data-aos-delay="600">
+            <i class="faq-icon bi bi-question-circle"></i>
+            <h3>What are the benefits of joining SPACS?</h3>
+            <div class="faq-content">
+              <p>Joining SPACS provides opportunities to network with peers, enhance technical skills, participate in competitions, and gain insights from industry experts through seminars and workshops.</p>
+            </div>
+            <i class="faq-toggle bi bi-chevron-right"></i>
+          </div><!-- End Faq item-->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Faq 2 Section -->
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>College of Engineering, Cherthala Pallippuram P.O, Alappuzha Dt.Kerala State, INDIA-688541</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+91 984 626 1894</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>spacscectl@gmail.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.266014378497!2d76.36139627479005!3d9.743519790349175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0879620b16c7e1%3A0x8858edaeedfc5220!2sCollege%20of%20Engineering%20Cherthala!5e0!3m2!1sen!2sin!4v1718649267673!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="email.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="mssg" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">CECTL</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>College of engineering Cherthala</p>
+            <p>Pallipuram P.O Cherthala Alappuzha</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 984 626 1894</span></p>
+            <p><strong>Email:</strong> <span>spacscectl@gmail.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+          </ul>
+        </div>
+
+  <div class="col-lg-2 col-md-3 footer-links">
+  <h4>Our Services</h4>
+  <ul>
+    <li><i class="bi bi-chevron-right"></i> <a href="#">Computer Programming Contest</a></li>
+    <li><i class="bi bi-chevron-right"></i> <a href="#">Seminars on IT Related Subjects</a></li>
+    <li><i class="bi bi-chevron-right"></i> <a href="#">Workshops on Programming and Managerial Skills</a></li>
+    <li><i class="bi bi-chevron-right"></i> <a href="#">Career Guidance in IT Industry</a></li>
+  </ul>
+</div>
+
+
+     <div class="col-lg-4 col-md-12">
+  <h4>Follow Us</h4>
+  <p>Stay updated with our latest news and events.</p>
+  <div class="social-links d-flex">
+    <a href="#"><i class="bi bi-twitter"></i></a>
+    <a href="#"><i class="bi bi-facebook"></i></a>
+    <a href="https://www.instagram.com/spacscec"><i class="bi bi-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/spacs-cec-b50a97315"><i class="bi bi-linkedin"></i></a>
+  </div>
+</div>
+
+
+      </div>
+      <p>please follow our <a href="terms.html">  Our Terms and Conditions</a>,<a href="refund.html">  Cancellation & Refund Policy</a></p>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SPACS CEC</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="http://www.cectl.ac.in">CEC</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

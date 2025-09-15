@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execom Member Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS file for custom styling -->
+</head>
+<body>
+    <p><a href="admin.php">&laquo; Back to Admin Page</a></p>
+    <div class="container">
+        <h1>Execom Member Management</h1>
+        <div class="button-container">
+            <a href="execom.html" class="action-button">
+                <i class="fas fa-user-plus"></i>
+                <span>Add Execom Member</span>
+            </a>
+            <a href="display_execom.php" class="action-button">
+                <i class="fas fa-users"></i>
+                <span>Display Execom Members</span>
+            </a>
+            <a href="edit_execom_member.php" class="action-button">
+                <i class="fas fa-user-edit"></i>
+                <span>Edit Execom Member</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.action-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    background-color: #e0e0e0;
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.action-button:hover {
+    background-color: #ccc;
+}
+
+.action-button i {
+    margin-right: 10px;
+}
+</style>

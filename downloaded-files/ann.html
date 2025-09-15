@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membership Announcement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+            margin: 0;
+        }
+
+        .announcement-container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            position: relative;
+        }
+
+        /* Logo animation */
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden; /* Ensures image fits within rounded borders */
+            background-color: white; /* Placeholder color */
+            animation: bounce 2s infinite;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.5;
+            margin: 10px 0;
+        }
+
+        .contact-info {
+            color: #333;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .register-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: lightblue;
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            transition: background-color 0.3s;
+        }
+
+        .register-btn:hover {
+            background-color: #45a049;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="announcement-container">
+        <div class="logo"><img src="logoo.png" alt="Logo"></div> <!-- Replace "logoo.png" with the actual path to your logo -->
+        <h2>Membership Offer Update</h2>
+        <p>The ₹100 membership offer has ended. From today onward, you are liable to pay ₹200 for membership.</p>
+        <p class="contact-info">For more information, please contact us: +91 8590594735</p>
+        <a href="https://www.spacscec.free.nf/join.html" class="register-btn">Register Now</a>
+    </div>
+
+</body>
+</html>

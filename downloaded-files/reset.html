@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #ff4747;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #f44336;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Reset All Data</h1>
+    <p>Click the button below to delete all data from all tables:</p>
+    
+    <button class="button" id="resetButton">Reset All Data</button>
+
+    <div class="message" id="message"></div>
+
+    <script>
+        // Handle the Reset Button click event
+        document.getElementById("resetButton").addEventListener("click", function() {
+            if (confirm("Are you sure you want to delete all data from all tables? This action cannot be undone.")) {
+                // Make the AJAX request to reset data
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", "reset_data.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onload = function () {
+                    // Show the result message after the request is completed
+                    document.getElementById("message").innerHTML = xhr.responseText;
+                };
+                xhr.send(); // Send the request
+            }
+        });
+    </script>
+
+</body>
+</html>
